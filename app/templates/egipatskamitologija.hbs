@@ -1,0 +1,10 @@
+<Quizsearch/>
+
+<div class="quiz-grid">
+    {{#each @this.model.data as |elem|}}
+        <Quiz @src={{elem.src}} @title={{elem.title}} @route={{elem.route}} />
+    {{/each}}
+</div>
+
+
+

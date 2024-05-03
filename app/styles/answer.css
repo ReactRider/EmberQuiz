@@ -1,0 +1,27 @@
+.default-answer-paragraph-style {
+  font-size: 1.1em;
+  font-family: cursive;
+  padding: 1em;
+  font-weight: 500;
+  color: red;
+  opacity: 0;
+}
+
+.default-answer-input-style {
+  width: 30%;
+  height: 50px;
+  border-radius: 18px;
+  outline: none;
+  font-size: 1.33em;
+  color: green;
+  margin: 30px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: 3px solid #767cdc;
+  transition: all 0.5s;
+  padding-left: 15px;
+}
+
+.default-answer-input-style:focus {
+  width: 40%;
+}

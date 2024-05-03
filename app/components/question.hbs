@@ -1,0 +1,14 @@
+
+<div class="question-container">
+    <p class="question">{{@this.arg1}}</p>
+
+    {{#if @this.arg3}}
+        <img class="flag" src={{@this.arg3}}/>
+    {{/if}}
+
+    <button class="show-answer" type="button" {{on "click" this.showAnswer}} id={{@this.id}}>Prikaži Odgovor</button>
+
+    <input placeholder="Vaš odgovor" id={{@this.id}} class="answer-input-{{@this.id}} default-answer-input-style"/>
+    
+    <p class="answer-{{@this.id}} default-answer-paragraph-style" >{{@this.arg2}}</p>
+</div>

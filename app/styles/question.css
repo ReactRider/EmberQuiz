@@ -1,0 +1,13 @@
+.question {
+  font-size: 2.2em;
+  font-family: Tahoma;
+  padding: 1em;
+  font-weight: 900;
+  color: #767cdc;
+}
+
+.question-container {
+  width: 100vw;
+  height: 25vh;
+  border: thick double #767cdc;
+}
