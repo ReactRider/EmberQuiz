@@ -1,0 +1,20 @@
+<div class="search-container">
+    <div class="search-logo-div">
+        <p>Pretraga Kvizova</p>
+    </div>
+
+    <div class="search-bar-div">
+        <Input @value={{this.query}} class="pretraga-kvizova" maxlength="30" minlength="3"/>
+    </div>
+</div>
+
+<div class="quiz-grid">
+
+    <Kvizovi::Filter @kvizovi={{@kvizovi}} @query={{this.query}} as |results|>
+        {{#each results as |elem|}}
+            <Quiz @src={{elem.src}} @title={{elem.title}} @route={{elem.route}} />
+        {{/each}}
+    </Kvizovi::Filter>
+
+
+</div>
