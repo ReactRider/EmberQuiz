@@ -1,5 +1,5 @@
 {{#each @this.model.data as |elem|}}
-    <Question @arg1={{elem.question}} @arg2={{elem.answer}} @id={{elem.id}}/>
+    <Question @arg1={{elem.question}} @arg2={{elem.answer}} @arg3={{elem.src}} @id={{elem.id}}/>
 {{/each}}
 
 <Submitquizbutton/>

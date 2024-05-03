@@ -123,6 +123,11 @@ export default class IndexRoute extends Route {
           src: 'assets/images/prijatelji.jpg',
           route: 'prijatelji',
         },
+      {
+          title: 'Brendovi',
+          src: 'assets/images/brendovi.jpg',
+          route: 'brendovi',
+      },
       ],
     };
   }

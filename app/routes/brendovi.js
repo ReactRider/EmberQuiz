@@ -6,77 +6,90 @@ export default class BrendoviRoute extends Route {
       data: [
         {
           id: 1,
-          question: '1. Šta je fotosinteza?',
+          question: '1. Čiji logo se nalazi na slici ispod?',
           answer:
-            'Fotosinteza je proces koji biljke koriste za pretvaranje sunčeve svetlosti, vode i ugljen-dioksida u glukozu (šećer) i kiseonik, uz pomoć hlorofila',
+          'bentley',
+          src:'assets/images/brendovi/bentley.avif',
         },
         {
           id: 2,
           question:
-            '2. Kako se nazivaju osnovne jedinice nasleđivanja u organizmima?',
-          answer: 'Geni',
+          '2. Čiji logo se nalazi na slici ispod?',
+          answer: 'bmw',
+          src:'assets/images/brendovi/bmw.avif',
         },
         {
           id: 3,
-          question: '3. Koja je funkcija DNK u ćelijama?',
+          question: '3. Čiji logo se nalazi na slici ispod?',
           answer:
-            'DNK (deoksiribonukleinska kiselina) nosi genetičku informaciju i kontrolira procese u ćelijama',
+            'greygoose',
+            src:'assets/images/brendovi/greygoose.png',
         },
         {
           id: 4,
-          question: '4. Šta je mitoza?',
+          question: '4. Čiji logo se nalazi na slici ispod?',
           answer:
-            'Mitoza je proces deobe ćelija kojim se formiraju dve identične ćelije sa istim brojem hromozoma kao i početna ćelija',
+            'instagram',
+            src:'assets/images/brendovi/instagram.avif',
         },
         {
           id: 5,
-          question: '5. Šta je mejoza?',
+          question: '5. Čiji logo se nalazi na slici ispod?',
           answer:
-            'Mejoza je proces deobe ćelija koji se javlja u reproduktivnim ćelijama organizma i rezultira stvaranjem haploidnih ćelija (ćelija sa polovinom broja hromozoma)',
+            'mcdonalds',
+            src:'assets/images/brendovi/mcdonalds.avif',
         },
         {
           id: 6,
-          question: '6. Koja je razlika između biljnih i životinjskih ćelija?',
+          question: '6. Čiji logo se nalazi na slici ispod?',
           answer:
-            'Biljne ćelije imaju ćelijski zid, hloroplaste i veliki centralni vakuol, dok životinjske ćelije nemaju ćelijski zid, hloroplaste i imaju više malih vakuola',
+            'mercedes',
+            src:'assets/images/brendovi/mercedes.avif',
         },
         {
           id: 7,
-          question: '7. Šta su fotosintetski pigmenti i koja je njihova uloga?',
+          question: '7. Čiji logo se nalazi na slici ispod?',
           answer:
-            'Fotosintetski pigmenti su hemijski spojevi koji apsorbuju svetlost i omogućavaju biljkama da obavljaju fotosintezu. Najvažniji fotosintetski pigment je hlorofil',
+            'moncler',
+            src:'assets/images/brendovi/moncler.jpeg',
         },
         {
           id: 8,
           question:
-            '8. Kako se zove proces razmnožavanja biljaka putem semena?',
+            '8. Čiji logo se nalazi na slici ispod?',
           answer:
-            'Proces razmnožavanja biljaka putem semena naziva se generativno razmnožavanje',
+            'newbalance',
+            src:'assets/images/brendovi/newbalance.avif',
         },
         {
           id: 9,
-          question: '9. Koja je uloga enzima u organizmima?',
+          question: '9. Čiji logo se nalazi na slici ispod?',
           answer:
-            'Enzimi su proteini koji katalizuju (ubrzavaju) hemijske reakcije u ćelijama, omogućavajući im da se odvijaju pri optimalnim brzinama',
+            'omega',
+            src:'assets/images/brendovi/omega.avif',
         },
         {
           id: 10,
-          question: '10. Koja je uloga ribosoma u ćeliji?',
+          question: '10. Čiji logo se nalazi na slici ispod?',
           answer:
-            'Ribosomi su mesta gde se sintetišu proteini u ćelijama, prema genetičkoj informaciji prenesenoj sa DNK',
+            'porsche',
+            src:'assets/images/brendovi/porsche.avif',
         },
         {
           id: 11,
-          question: '11. Šta je ekologija?',
+          question: '11. Čiji logo se nalazi na slici ispod?',
           answer:
-            ' Ekologija je naučna disciplina koja proučava odnose između organizama i njihove okoline',
+            'starbucks',
+          src:'assets/images/brendovi/starbucks.avif',
         },
         {
           id: 12,
           question:
-            '12. Koja je funkcija ribonukleinske kiseline (RNK) u ćelijama?',
+            '12. Čiji logo se nalazi na slici ispod?',
           answer:
-            'Ribonukleinska kiselina (RNK) ima ulogu u prenosu genetičke informacije',
+            'tesla',
+          src: 
+          'assets/images/brendovi/tesla.avif',
         },
       ],
     };
