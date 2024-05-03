@@ -1,22 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default class IndexRoute extends Route {
-  liveSearch() {
-    let search_query = document.getElementById('pretraga-kvizova').value;
-    let quizes = document.querySelectorAll('.quiz');
-
-    for (var i = 0; i < quizes.length; i++) {
-      if (
-        quizes[i].innerText.toLowerCase().includes(search_query.toLowerCase())
-      ) {
-        quizes[i].classList.remove('is-hidden');
-        document.querySelector('.quiz-grid').style.alignItems = 'flex-start';
-      } else {
-        quizes[i].classList.add('is-hidden');
-      }
-    }
-  }
-
+  
   model() {
     let quizes = document.querySelectorAll('.quiz');
 
@@ -25,12 +10,6 @@ export default class IndexRoute extends Route {
       quizes[i].style.width = rand + '%';
       quizes[i].style.height = rand + '%';
     }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      document
-        .getElementById('pretraga-kvizova')
-        .addEventListener('keyup', liveSearch);
-    });
 
     return {
       data: [
