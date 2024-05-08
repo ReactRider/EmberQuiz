@@ -1,7 +1,6 @@
 import Route from '@ember/routing/route';
 
 export default class IndexRoute extends Route {
-  
   model() {
     let quizes = document.querySelectorAll('.quiz');
 
@@ -123,11 +122,11 @@ export default class IndexRoute extends Route {
           src: 'assets/images/prijatelji.jpg',
           route: 'prijatelji',
         },
-      {
+        {
           title: 'Brendovi',
           src: 'assets/images/brendovi.jpg',
           route: 'brendovi',
-      },
+        },
       ],
     };
   }

@@ -1,14 +1,43 @@
 
 <div class="question-container">
-    <p class="question">{{@this.arg1}}</p>
+    <p class="question">{{@this.qst}}</p>
 
-    {{#if @this.arg3}}
-        <img class="flag" src={{@this.arg3}}/>
+    {{#if @this.img}}
+        <img class="flag" src={{@this.img}}/>
     {{/if}}
 
-    <button class="show-answer" type="button" {{on "click" this.showAnswer}} id={{@this.id}}>Prikaži Odgovor</button>
+    <div class="answer-container">
+        <form id={{@this.id}}>
 
-    <input placeholder="Vaš odgovor" id={{@this.id}} class="answer-input-{{@this.id}} default-answer-input-style"/>
-    
-    <p class="answer-{{@this.id}} default-answer-paragraph-style" >{{@this.arg2}}</p>
+            {{#if @this.ans1}}
+            <div class="individual-answer-container" id="xyz4">
+                <label for="{{@this.id}}-ans1" class="odgovor-label">1. {{@this.ans1}}</label>
+                <input type="radio" id="{{@this.id}}-ans1" name="odgovori" class="default-answer-input-style"/>
+            </div>
+            {{/if}}
+
+            {{#if @this.ans2}}
+            <div class="individual-answer-container" id="xyz3">
+                <label for="{{@this.id}}-ans2" class="odgovor-label">2. {{@this.ans2}}</label>
+                <input type="radio" id="{{@this.id}}-ans2" name='odgovori' class="default-answer-input-style"/>
+            </div>
+            {{/if}}
+
+            {{#if @this.ans3}}
+            <div class="individual-answer-container" id="xyz2">
+                <label for="{{@this.id}}-ans3" class="odgovor-label">3. {{@this.ans3}}</label>
+                <input type="radio" id="{{@this.id}}-ans3" name='odgovori' class="default-answer-input-style"/>
+            </div>
+            {{/if}}
+
+            {{#if @this.ans4}}
+            <div class="individual-answer-container" id="xyz">
+                <label for="{{@this.id}}-ans4" class="odgovor-label">4. {{@this.ans4}}</label>
+                <input type="radio" id="{{@this.id}}-ans4" name='odgovori' class="default-answer-input-style"/>
+            </div>
+            {{/if}}
+
+        </form>
+    </div>    
+
 </div>

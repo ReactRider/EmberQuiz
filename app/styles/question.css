@@ -1,7 +1,6 @@
 .question {
   font-size: 2.2em;
   font-family: Tahoma;
-  padding: 1em;
   font-weight: 900;
   color: #767cdc;
 }
@@ -10,4 +9,7 @@
   width: 100vw;
   height: 25vh;
   border: thick double #767cdc;
+  margin-bottom: 50px;
+  padding: 60px;
+  background-color: lightgray;
 }

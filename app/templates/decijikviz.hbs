@@ -1,6 +1,16 @@
-{{#each @this.model.data as |elem|}}
+
+<div id="timer-container">
+    <div class="div1"><h3>Preostalo Vreme: </h3></div>
+    <div class="div2"><p id="timer-paragraph"></p></div>
+</div>
+{{#each @model.data as |elem|}}
     <Question @arg1={{elem.question}} @arg2={{elem.answer}} @id={{elem.id}}/>
 {{/each}}
 
 
 <Submitquizbutton/>
+
+<script>
+        
+    </script>
+  

@@ -1,6 +1,43 @@
-{{#each @this.model.data as |elem|}}
+
+<div id="timer-container">
+    <div class="div1"><h3>Preostalo Vreme: </h3></div>
+    <div class="div2"><p id="timer-paragraph"></p></div>
+</div>
+{{#each @model.data as |elem|}}
     <Question @arg1={{elem.question}} @arg2={{elem.answer}} @id={{elem.id}}/>
 {{/each}}
 
 
 <Submitquizbutton/>
+
+<script>
+        let time = 120;
+        const timerID = setInterval(() => {
+            if(time == 0) {
+                let arr = document.querySelectorAll('.default-answer-input-style');
+                for(let i = 0; i < arr.length; i++) 
+                    arr[i].disabled = true;  
+                clearInterval(timerID);
+          //     alert("Time is up!");
+          }
+            if(time < 80 && time >= 40) 
+                document.querySelector('.div2').style.color = "orange";
+            else if(time < 60)
+                document.querySelector('.div2').style.color = "red";   
+            
+            document.querySelector("#timer-paragraph").innerHTML = time--;
+        }, 1000);
+    
+        window.onscroll = function() {myFunction()};
+    
+    let navbar = document.getElementById("timer-container");
+    let sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky)
+        navbar.classList.add("sticky")
+      else
+        navbar.classList.remove("sticky");
+    }
+    </script>
+  

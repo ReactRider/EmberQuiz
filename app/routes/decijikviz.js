@@ -6,7 +6,7 @@ export default class DecijikvizRoute extends Route {
       data: [
         {
           id: 1,
-          question: '1. Koja boja neba tokom dana?',
+          question: '1. Koja je boja neba tokom dana?',
           answer: 'Plave',
         },
         {
