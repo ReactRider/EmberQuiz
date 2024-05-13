@@ -10,7 +10,7 @@
 <Submitquizbutton/>
 
 <script>
-    let time = 120, numOfCorrectAnswers = 0, secsToStart = 3, timerID;
+    let time = 100, numOfCorrectAnswers = 0, secsToStart = 3, timerID;
     let inputTagsArr = document.querySelectorAll('.default-answer-input-style');
     let allFormsArr = document.getElementsByTagName('form');
     
@@ -35,7 +35,7 @@
         document.querySelector("#submit-button").style.display = "block";
         timerID = setInterval(() => {
             endQuizOutOfTime();
-        }, 200);
+        }, 1000);
     }, 4000);
 
     function endQuizOutOfTime() {
@@ -69,9 +69,9 @@
             setTimeout(Handler, 20000);
         }
 
-        if(time < 80 && time >= 40) 
+        if(time < 70 && time >= 40) 
             document.querySelector('.time-left').style.color = "orange";
-        else if(time < 60)
+        else if(time < 40)
             document.querySelector('.time-left').style.color = "red"; 
 
         document.querySelector("#time-left-heading").innerHTML = "Preostalo Vreme :";

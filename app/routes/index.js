@@ -127,6 +127,11 @@ export default class IndexRoute extends Route {
           src: 'assets/images/brendovi.jpg',
           route: 'brendovi',
         },
+        {
+          title: 'Domaći Filmovi',
+          src: 'assets/images/domacifilmovi.jpeg',
+          route: 'domacifilmovi',
+        },
       ],
     };
   }
