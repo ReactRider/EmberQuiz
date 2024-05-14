@@ -1,43 +1,159 @@
-
 <div id="timer-container">
-    <div class="div1"><h3>Preostalo Vreme: </h3></div>
-    <div class="div2"><p id="timer-paragraph"></p></div>
+    <div class="kviz-pocinje-za"><h3 id="time-left-heading">Kviz počinje za :</h3></div>
+    <div class="time-left crvena-slova"><p id="timer-paragraph"></p></div>
 </div>
-{{#each @model.data as |elem|}}
-    <Question @arg1={{elem.question}} @arg2={{elem.answer}} @id={{elem.id}}/>
-{{/each}}
 
+{{#each @model.data as |elem|}}
+    <Question @qst={{elem.question}} @ans1={{elem.answer1}} @ans2={{elem.answer2}} @ans3={{elem.answer3}} @ans4={{elem.answer4}} @id={{elem.id}}/>
+{{/each}}
 
 <Submitquizbutton/>
 
 <script>
-        let time = 120;
-        const timerID = setInterval(() => {
-            if(time == 0) {
-                let arr = document.querySelectorAll('.default-answer-input-style');
-                for(let i = 0; i < arr.length; i++) 
-                    arr[i].disabled = true;  
-                clearInterval(timerID);
-          //     alert("Time is up!");
-          }
-            if(time < 80 && time >= 40) 
-                document.querySelector('.div2').style.color = "orange";
-            else if(time < 60)
-                document.querySelector('.div2').style.color = "red";   
-            
-            document.querySelector("#timer-paragraph").innerHTML = time--;
-        }, 1000);
+    let time = 100, numOfCorrectAnswers = 0, secsToStart = 3, timerID;
+    let inputTagsArr = document.querySelectorAll('.default-answer-input-style');
+    let allFormsArr = document.getElementsByTagName('form');
     
-        window.onscroll = function() {myFunction()};
-    
+    for(let i = 0; i < inputTagsArr.length; i++) 
+        inputTagsArr[i].disabled = true;  
+
     let navbar = document.getElementById("timer-container");
     let sticky = navbar.offsetTop;
+    const submitBtn = document.querySelector("#submit-button");
+    submitBtn.addEventListener('click',endQuizButton);
+    window.addEventListener('scroll', stickyTop);
+
+    const startID = setInterval( () => {
+        if(secsToStart == 0)
+            clearInterval(startID);
+        document.querySelector("#timer-paragraph").innerHTML = secsToStart--;
+    },1000);
     
-    function myFunction() {
+    setTimeout(function() {
+        for(let i = 0; i < inputTagsArr.length; i++) 
+            inputTagsArr[i].disabled = false;  
+        document.querySelector("#submit-button").style.display = "block";
+        timerID = setInterval(() => {
+            endQuizOutOfTime();
+        }, 1000);
+    }, 4000);
+
+    function endQuizOutOfTime() {
+        document.querySelector('.time-left').classList.remove('crvena-slova');
+       
+        if(time == 0) {
+            submitBtn.disabled = true;
+            submitBtn.style.display = "none";
+            let arrAllAnswers = document.getElementsByName("odgovori");
+            let arrUserAnswers = [];
+            let numOfUserAnswers = 0;
+
+            for(let i = 0; i < arrAllAnswers.length; i++) 
+                if(arrAllAnswers[i].checked)
+                    arrUserAnswers[numOfUserAnswers++] = arrAllAnswers[i];
+
+            
+        for(let i = 0; i < arrUserAnswers.length; i++) {
+            if(arrUserAnswers[i].id == arrUserAnswers[i].parentElement.parentElement.id+'-'+localStorage.getItem(arrUserAnswers[i].parentElement.parentElement.id+".lit")) {
+                ++numOfCorrectAnswers;
+                document.getElementById(arrUserAnswers[i].parentElement.parentElement.id).classList.add('form-containing-correct-ans');
+            } else 
+                document.getElementById(arrUserAnswers[i].parentElement.parentElement.id).classList.add('form-containing-incorrect-ans');
+        }
+            for(let i = 0; i < inputTagsArr.length; i++) 
+                inputTagsArr[i].disabled = true;  
+            
+            clearInterval(timerID);
+            window.scrollTo(0,0);
+            generateResultBoard();
+            setTimeout(Handler, 20000);
+        }
+
+        if(time < 70 && time >= 40) 
+            document.querySelector('.time-left').style.color = "orange";
+        else if(time < 40)
+            document.querySelector('.time-left').style.color = "red"; 
+
+        document.querySelector("#time-left-heading").innerHTML = "Preostalo Vreme :";
+        document.querySelector("#timer-paragraph").innerHTML = time-- + " sekundi";
+    }
+    
+    function endQuizButton() {
+        submitBtn.disabled = true;
+        submitBtn.style.display = "none";
+        let arrAllAnswers = document.getElementsByName("odgovori");
+        let arrUserAnswers = [];
+        let numOfUserAnswers = 0;
+
+        for(let i = 0; i < arrAllAnswers.length; i++) 
+            if(arrAllAnswers[i].checked)
+                arrUserAnswers[numOfUserAnswers++] = arrAllAnswers[i];
+
+        for(let i = 0; i < arrUserAnswers.length; i++) {
+            if(arrUserAnswers[i].id == arrUserAnswers[i].parentElement.parentElement.id+'-'+localStorage.getItem(arrUserAnswers[i].parentElement.parentElement.id+".lit")) {
+                ++numOfCorrectAnswers;
+                document.getElementById(arrUserAnswers[i].parentElement.parentElement.id).classList.add('form-containing-correct-ans');
+            } else 
+                document.getElementById(arrUserAnswers[i].parentElement.parentElement.id).classList.add('form-containing-incorrect-ans');
+        }
+        
+        for(let i = 0; i < inputTagsArr.length; i++) 
+            inputTagsArr[i].disabled = true;  
+        
+        clearInterval(timerID);
+        window.scrollTo(0,0);
+        generateResultBoard();
+        setTimeout(Handler, 20000);
+    }
+
+    function generateResultBoard() {
+        document.body.classList.add('lock-scroll');
+        let resultDiv = document.createElement('div');
+        resultDiv.innerHTML = "<h1>Tačno ste odgovorili na <span class='zelena-slova'>" + numOfCorrectAnswers + '</span>/<span class="zelena-slova">' + allFormsArr.length + "</span> pitanja!</h1>";
+        resultDiv.id = "resultBoard";
+        document.body.appendChild(resultDiv);
+       
+        let secsToSendHome = 19;
+        let h2ToHome = document.createElement('h2');
+        h2ToHome.id = "secs-to-home-heading";
+        resultDiv.appendChild(h2ToHome);
+
+        let detailsBtn = document.createElement('btn');
+        detailsBtn.id = "details-btn";
+        let textNodeBtn = document.createTextNode("Detaljan pregled");
+        detailsBtn.appendChild(textNodeBtn);
+        detailsBtn.addEventListener('click', ansReport);
+        resultDiv.appendChild(detailsBtn);
+
+        const toHomeTimerID = setInterval( () => {
+            if(secsToSendHome == 0)
+                clearInterval(toHomeTimerID);
+            document.querySelector("#secs-to-home-heading").innerHTML = "Povratak na početnu stranicu za <span class='crvena-slova'>" + secsToSendHome-- + "</span> sekundi..";
+        },1000);
+    }
+
+    function ansReport() {
+        document.querySelector('#resultBoard').style.display = "none";
+        document.body.classList.remove('lock-scroll');
+        let secs = 16;
+        const thisID = setInterval( () => {
+            if(secs == 0)
+                clearInterval(thisID);
+            document.querySelector("#time-left-heading").innerHTML = "Povratak na glavnu stranu za :";
+            document.querySelector("#timer-paragraph").innerHTML = secs-- + " sekundi";
+        }, 1000);
+    }
+
+    function stickyTop() {
       if (window.pageYOffset >= sticky)
         navbar.classList.add("sticky")
       else
         navbar.classList.remove("sticky");
     }
-    </script>
+
+    function Handler() {
+        window.location.replace("http://localhost:4200");
+    }
+    
+</script>
   
