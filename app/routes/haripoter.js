@@ -2,22 +2,21 @@ import Route from '@ember/routing/route';
 
 export default class HaripoterRoute extends Route {
   model() {
-    localStorage.setItem("1.hp","ans4");
-    localStorage.setItem("2.hp","ans3"); 
-    localStorage.setItem("3.hp","ans2");
-    localStorage.setItem("4.hp","ans1");
-    localStorage.setItem("5.hp","ans3");
-    localStorage.setItem("6.hp","ans2");
-    localStorage.setItem("7.hp","ans2");
-    localStorage.setItem("8.hp","ans1");
-    localStorage.setItem("9.hp","ans1");
-    localStorage.setItem("10.hp","ans4");
-    localStorage.setItem("11.hp","ans2");
-    localStorage.setItem("12.hp","ans2");
-    localStorage.setItem("13.hp","ans4");
+    localStorage.setItem('1.hp', 'ans4');
+    localStorage.setItem('2.hp', 'ans3');
+    localStorage.setItem('3.hp', 'ans2');
+    localStorage.setItem('4.hp', 'ans1');
+    localStorage.setItem('5.hp', 'ans3');
+    localStorage.setItem('6.hp', 'ans2');
+    localStorage.setItem('7.hp', 'ans2');
+    localStorage.setItem('8.hp', 'ans1');
+    localStorage.setItem('9.hp', 'ans1');
+    localStorage.setItem('10.hp', 'ans4');
+    localStorage.setItem('11.hp', 'ans2');
+    localStorage.setItem('12.hp', 'ans2');
+    localStorage.setItem('13.hp', 'ans4');
 
     return {
-
       data: [
         {
           id: 1,
@@ -45,7 +44,8 @@ export default class HaripoterRoute extends Route {
         },
         {
           id: 4,
-          question: '4. Kako se zove najstrašniji i najčuvaniji zatvor u čarobnom svetu?',
+          question:
+            '4. Kako se zove najstrašniji i najčuvaniji zatvor u čarobnom svetu?',
           answer1: 'Azkaban',
           answer3: 'Azkabam',
           answer2: 'Azbakan',
@@ -103,8 +103,7 @@ export default class HaripoterRoute extends Route {
         },
         {
           id: 11,
-          question:
-            '11. Koji se sport igra u čarobnjačkom svetu?',
+          question: '11. Koji se sport igra u čarobnjačkom svetu?',
           answer2: 'Metloboj',
           answer1: 'Tenis',
           answer4: 'Fudbal',
@@ -112,8 +111,7 @@ export default class HaripoterRoute extends Route {
         },
         {
           id: 12,
-          question:
-            '12. Kako se zove ujak Hari Potera?',
+          question: '12. Kako se zove ujak Hari Potera?',
           answer2: 'Dursley',
           answer1: 'Dumbledore',
           answer4: 'Darsley',

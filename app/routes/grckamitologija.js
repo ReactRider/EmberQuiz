@@ -2,18 +2,18 @@ import Route from '@ember/routing/route';
 
 export default class GrckamitologijaRoute extends Route {
   model() {
-    localStorage.setItem("1.gr","ans2");
-    localStorage.setItem("2.gr","ans3"); 
-    localStorage.setItem("3.gr","ans1");
-    localStorage.setItem("4.gr","ans1");
-    localStorage.setItem("5.gr","ans4");
-    localStorage.setItem("6.gr","ans2");
-    localStorage.setItem("7.gr","ans4");
-    localStorage.setItem("8.gr","ans3");
-    localStorage.setItem("9.gr","ans3");
-    localStorage.setItem("10.gr","ans2");
-    localStorage.setItem("11.gr","ans1");
-    localStorage.setItem("12.gr","ans4");
+    localStorage.setItem('1.gr', 'ans2');
+    localStorage.setItem('2.gr', 'ans3');
+    localStorage.setItem('3.gr', 'ans1');
+    localStorage.setItem('4.gr', 'ans1');
+    localStorage.setItem('5.gr', 'ans4');
+    localStorage.setItem('6.gr', 'ans2');
+    localStorage.setItem('7.gr', 'ans4');
+    localStorage.setItem('8.gr', 'ans3');
+    localStorage.setItem('9.gr', 'ans3');
+    localStorage.setItem('10.gr', 'ans2');
+    localStorage.setItem('11.gr', 'ans1');
+    localStorage.setItem('12.gr', 'ans4');
 
     return {
       data: [
@@ -83,7 +83,8 @@ export default class GrckamitologijaRoute extends Route {
         },
         {
           id: 9,
-          question: '9. Ko je bio grčki heroj poznat po svojoj snazi i hrabrosti?',
+          question:
+            '9. Ko je bio grčki heroj poznat po svojoj snazi i hrabrosti?',
           answer3: 'Herkules',
           answer1: 'Had',
           answer2: 'Ahilej',
@@ -107,7 +108,8 @@ export default class GrckamitologijaRoute extends Route {
         },
         {
           id: 12,
-          question: '12. Ko je bio grčki titan koji je ukrao vatru i dao je ljudima?',
+          question:
+            '12. Ko je bio grčki titan koji je ukrao vatru i dao je ljudima?',
           answer4: 'Prometej',
           answer1: 'Had',
           answer2: 'Herkules',

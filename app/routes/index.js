@@ -88,14 +88,9 @@ export default class IndexRoute extends Route {
           route: 'zastave',
         },
         {
-          title: 'Olimpijada 21. Vek',
-          src: 'assets/images/ol21.jpg',
-          route: 'oi21',
-        },
-        {
-          title: 'Olimpijada 20. Vek',
-          src: 'assets/images/ol20.jpg',
-          route: 'oi20',
+          title: 'Olimpijske Igre',
+          src: 'assets/images/oi.jpg',
+          route: 'olimpijskeigre',
         },
         {
           title: 'Naučnici',

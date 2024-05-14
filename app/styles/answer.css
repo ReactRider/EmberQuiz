@@ -25,15 +25,15 @@
 .answer-container {
   display: flex;
   flex-direction: row;
-  flex-wrap : nowrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   width: 95%;
 }
 .odgovor-label {
   font-size: 1.35em;
-  font-weight : 500;
-  cursor : pointer;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 form {
@@ -41,10 +41,9 @@ form {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  flex-wrap : wrap;
+  flex-wrap: wrap;
   width: 100%;
 }
-
 
 .individual-answer-container {
   width: 20%;

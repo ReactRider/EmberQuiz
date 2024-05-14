@@ -2,20 +2,20 @@ import Route from '@ember/routing/route';
 
 export default class GeografijaRoute extends Route {
   model() {
-    localStorage.setItem("1.geo","ans3");
-    localStorage.setItem("2.geo","ans2"); 
-    localStorage.setItem("3.geo","ans3");
-    localStorage.setItem("4.geo","ans2");
-    localStorage.setItem("5.geo","ans4");
-    localStorage.setItem("6.geo","ans1");
-    localStorage.setItem("7.geo","ans4");
-    localStorage.setItem("8.geo","ans1");
-    localStorage.setItem("9.geo","ans3");
-    localStorage.setItem("10.geo","ans4");
-    localStorage.setItem("11.geo","ans1");
-    localStorage.setItem("12.geo","ans2");
-    localStorage.setItem("13.geo","ans4");
-    localStorage.setItem("14.geo","ans2");
+    localStorage.setItem('1.geo', 'ans3');
+    localStorage.setItem('2.geo', 'ans2');
+    localStorage.setItem('3.geo', 'ans3');
+    localStorage.setItem('4.geo', 'ans2');
+    localStorage.setItem('5.geo', 'ans4');
+    localStorage.setItem('6.geo', 'ans1');
+    localStorage.setItem('7.geo', 'ans4');
+    localStorage.setItem('8.geo', 'ans1');
+    localStorage.setItem('9.geo', 'ans3');
+    localStorage.setItem('10.geo', 'ans4');
+    localStorage.setItem('11.geo', 'ans1');
+    localStorage.setItem('12.geo', 'ans2');
+    localStorage.setItem('13.geo', 'ans4');
+    localStorage.setItem('14.geo', 'ans2');
 
     return {
       data: [
@@ -99,7 +99,8 @@ export default class GeografijaRoute extends Route {
             'Najdužu granicu na svetu dele Rusija, Kanada i Sjedinjene Američke Države',
           answer1: 'Najdužu granicu na svetu dele Kina, Rusija i Indija',
           answer4: 'Najdužu granicu na svetu dele Rusija, Finska i Švedska',
-          answer3: 'Najdužu granicu na svetu dele Saudijska Arabija, Irak i Azerbejdžan',
+          answer3:
+            'Najdužu granicu na svetu dele Saudijska Arabija, Irak i Azerbejdžan',
         },
         {
           id: 11,
@@ -131,7 +132,6 @@ export default class GeografijaRoute extends Route {
           answer4: 'Filipinski arhipelag',
           answer3: 'Bahamski arhipelag',
         },
-
       ],
     };
   }

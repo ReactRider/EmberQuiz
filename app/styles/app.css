@@ -258,7 +258,7 @@ body {
   height: 80px;
   background-color: #767cdc;
   color: white;
-  cursor : pointer;
+  cursor: pointer;
   border-radius: 18px;
   font-size: 1.8em;
   text-align: center;
@@ -306,30 +306,30 @@ body {
 #resultBoard {
   width: 60vw;
   height: 60vh;
-  font-size : 1.5em;
-  border : 6px solid #000;
+  font-size: 1.5em;
+  border: 6px solid #000;
   border-radius: 16px;
-  cursor : pointer;
+  cursor: pointer;
   background-color: #767cdc;
-  color : #fff;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 50px;
   position: absolute;
-  top : 20%;
-  left : 20%;
+  top: 20%;
+  left: 20%;
   z-index: 1000;
   text-align: center;
 }
 
 .crvena-slova {
-  color : firebrick;  
+  color: firebrick;
 }
 
 .zelena-slova {
-  color : forestgreen;
+  color: forestgreen;
   font-size: 1.8em;
 }
 .lock-scroll {
@@ -337,31 +337,31 @@ body {
 }
 
 .secs-to-home-heading {
-  color : #fff;
+  color: #fff;
 }
 
 .form-containing-correct-ans {
-  border : 4px solid forestgreen;
+  border: 4px solid forestgreen;
   background-color: lightgreen;
-  color : #000;
+  color: #000;
 }
 
 .form-containing-incorrect-ans {
-  border : 4px solid firebrick;
-  background-color : lightcoral;
-  color : #000;
+  border: 4px solid firebrick;
+  background-color: lightcoral;
+  color: #000;
 }
 
 #details-btn {
   width: 70%;
   height: 50px;
-  border : 3px solid #fff;
-  border-radius : 16px;
+  border: 3px solid #fff;
+  border-radius: 16px;
   background-color: #fff;
-  color : #767cdc;
+  color: #767cdc;
   text-align: center;
   transition: all 0.7s;
-} 
+}
 
 #details-btn:hover {
   background-color: #767cdc;

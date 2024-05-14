@@ -80,6 +80,7 @@
   },
   "dependencies": {
     "ember-stopwatch": "^1.2.1",
+    "latest-version": "^9.0.0",
     "moment": "^2.30.1"
   }
 }

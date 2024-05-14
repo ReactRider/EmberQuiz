@@ -2,21 +2,21 @@ import Route from '@ember/routing/route';
 
 export default class DecijikvizRoute extends Route {
   model() {
-    localStorage.setItem("1.deca","ans3");
-    localStorage.setItem("2.deca","ans1"); 
-    localStorage.setItem("3.deca","ans4");
-    localStorage.setItem("4.deca","ans2");
-    localStorage.setItem("5.deca","ans1");
-    localStorage.setItem("6.deca","ans2");
-    localStorage.setItem("7.deca","ans2");
-    localStorage.setItem("8.deca","ans4");
-    localStorage.setItem("9.deca","ans1");
-    localStorage.setItem("10.deca","ans2");
-    localStorage.setItem("11.deca","ans2");
-    localStorage.setItem("12.deca","ans3");
-    localStorage.setItem("13.deca","ans1");
-    localStorage.setItem("14.deca","ans4");
-    localStorage.setItem("15.deca","ans3");
+    localStorage.setItem('1.deca', 'ans3');
+    localStorage.setItem('2.deca', 'ans1');
+    localStorage.setItem('3.deca', 'ans4');
+    localStorage.setItem('4.deca', 'ans2');
+    localStorage.setItem('5.deca', 'ans1');
+    localStorage.setItem('6.deca', 'ans2');
+    localStorage.setItem('7.deca', 'ans2');
+    localStorage.setItem('8.deca', 'ans4');
+    localStorage.setItem('9.deca', 'ans1');
+    localStorage.setItem('10.deca', 'ans2');
+    localStorage.setItem('11.deca', 'ans2');
+    localStorage.setItem('12.deca', 'ans3');
+    localStorage.setItem('13.deca', 'ans1');
+    localStorage.setItem('14.deca', 'ans4');
+    localStorage.setItem('15.deca', 'ans3');
 
     return {
       data: [
@@ -68,12 +68,10 @@ export default class DecijikvizRoute extends Route {
         },
         {
           id: 7,
-          question:
-            '7. Šta koristimo za pranje zuba?',
+          question: '7. Šta koristimo za pranje zuba?',
           answer2: 'Četkicu za zube',
           answer1: 'Viljušku',
           answer3: 'Ništa od ponuđenog',
-
         },
         {
           id: 8,
@@ -114,7 +112,6 @@ export default class DecijikvizRoute extends Route {
           answer1: 'Pet dana',
           answer2: 'Tri dana',
           answer4: 'Deset dana',
-
         },
         {
           id: 13,
@@ -123,7 +120,6 @@ export default class DecijikvizRoute extends Route {
           answer2: 'Ništa od ponuđenog',
           answer4: 'Momo Kapor',
           answer3: 'Jurij Gagarin',
-
         },
         {
           id: 14,
@@ -132,17 +128,14 @@ export default class DecijikvizRoute extends Route {
           answer1: 'Hans Kristijan Andersen',
           answer2: 'Danilo Kiš',
           answer3: 'Ljubomir Ršumović',
-
         },
         {
           id: 15,
-          question:
-            '15. Koja životinja ima prugaste šare i živi u Africi?',
+          question: '15. Koja životinja ima prugaste šare i živi u Africi?',
           answer3: 'Zebra',
           answer1: 'Lav',
           answer2: 'Konj',
           answer4: 'Magarac',
-
         },
       ],
     };

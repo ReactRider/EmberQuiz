@@ -2,22 +2,22 @@ import Route from '@ember/routing/route';
 
 export default class GlavnigradoviRoute extends Route {
   model() {
-    localStorage.setItem("1.grad","ans2");
-    localStorage.setItem("2.grad","ans1"); 
-    localStorage.setItem("3.grad","ans4");
-    localStorage.setItem("4.grad","ans3");
-    localStorage.setItem("5.grad","ans4");
-    localStorage.setItem("6.grad","ans2");
-    localStorage.setItem("7.grad","ans2");
-    localStorage.setItem("8.grad","ans1");
-    localStorage.setItem("9.grad","ans2");
-    localStorage.setItem("10.grad","ans3");
-    localStorage.setItem("11.grad","ans4");
-    localStorage.setItem("12.grad","ans1");
-    localStorage.setItem("13.grad","ans2");
-    localStorage.setItem("14.grad","ans3");
-    localStorage.setItem("15.grad","ans2");
-    localStorage.setItem("16.grad","ans1");
+    localStorage.setItem('1.grad', 'ans2');
+    localStorage.setItem('2.grad', 'ans1');
+    localStorage.setItem('3.grad', 'ans4');
+    localStorage.setItem('4.grad', 'ans3');
+    localStorage.setItem('5.grad', 'ans4');
+    localStorage.setItem('6.grad', 'ans2');
+    localStorage.setItem('7.grad', 'ans2');
+    localStorage.setItem('8.grad', 'ans1');
+    localStorage.setItem('9.grad', 'ans2');
+    localStorage.setItem('10.grad', 'ans3');
+    localStorage.setItem('11.grad', 'ans4');
+    localStorage.setItem('12.grad', 'ans1');
+    localStorage.setItem('13.grad', 'ans2');
+    localStorage.setItem('14.grad', 'ans3');
+    localStorage.setItem('15.grad', 'ans2');
+    localStorage.setItem('16.grad', 'ans1');
 
     return {
       data: [

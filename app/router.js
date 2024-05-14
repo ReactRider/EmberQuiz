@@ -24,11 +24,8 @@ Router.map(function () {
   this.route('menadzment');
   this.route('muzika');
   this.route('naucnici');
-  this.route('oi20');
-  this.route('oi21');
+  this.route('olimpijskeigre');
   this.route('periodnisistemi');
-  this.route('poznatelicnosti');
-  this.route('poznatipisci');
   this.route('rimskamitologija');
   this.route('stranifilmovi');
   this.route('zastave');

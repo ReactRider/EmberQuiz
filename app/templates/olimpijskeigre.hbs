@@ -54,7 +54,7 @@
 
             
         for(let i = 0; i < arrUserAnswers.length; i++) {
-            if(arrUserAnswers[i].id == arrUserAnswers[i].parentElement.parentElement.id+'-'+localStorage.getItem(arrUserAnswers[i].parentElement.parentElement.id+".muz")) {
+            if(arrUserAnswers[i].id == arrUserAnswers[i].parentElement.parentElement.id+'-'+localStorage.getItem(arrUserAnswers[i].parentElement.parentElement.id+".oi")) {
                 ++numOfCorrectAnswers;
                 document.getElementById(arrUserAnswers[i].parentElement.parentElement.id).classList.add('form-containing-correct-ans');
             } else 
@@ -90,7 +90,7 @@
                 arrUserAnswers[numOfUserAnswers++] = arrAllAnswers[i];
 
         for(let i = 0; i < arrUserAnswers.length; i++) {
-            if(arrUserAnswers[i].id == arrUserAnswers[i].parentElement.parentElement.id+'-'+localStorage.getItem(arrUserAnswers[i].parentElement.parentElement.id+".muz")) {
+            if(arrUserAnswers[i].id == arrUserAnswers[i].parentElement.parentElement.id+'-'+localStorage.getItem(arrUserAnswers[i].parentElement.parentElement.id+".oi")) {
                 ++numOfCorrectAnswers;
                 document.getElementById(arrUserAnswers[i].parentElement.parentElement.id).classList.add('form-containing-correct-ans');
             } else 

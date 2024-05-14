@@ -2,19 +2,18 @@ import Route from '@ember/routing/route';
 
 export default class BrendoviRoute extends Route {
   model() {
-    localStorage.setItem("1.bra","ans4");
-    localStorage.setItem("2.bra","ans3"); 
-    localStorage.setItem("3.bra","ans3");
-    localStorage.setItem("4.bra","ans2");
-    localStorage.setItem("5.bra","ans2");
-    localStorage.setItem("6.bra","ans4");
-    localStorage.setItem("7.bra","ans4");
-    localStorage.setItem("8.bra","ans1");
-    localStorage.setItem("9.bra","ans1");
-    localStorage.setItem("10.bra","ans4");
-    localStorage.setItem("11.bra","ans3");
-    localStorage.setItem("12.bra","ans4");
-
+    localStorage.setItem('1.bra', 'ans4');
+    localStorage.setItem('2.bra', 'ans3');
+    localStorage.setItem('3.bra', 'ans3');
+    localStorage.setItem('4.bra', 'ans2');
+    localStorage.setItem('5.bra', 'ans2');
+    localStorage.setItem('6.bra', 'ans4');
+    localStorage.setItem('7.bra', 'ans4');
+    localStorage.setItem('8.bra', 'ans1');
+    localStorage.setItem('9.bra', 'ans1');
+    localStorage.setItem('10.bra', 'ans4');
+    localStorage.setItem('11.bra', 'ans3');
+    localStorage.setItem('12.bra', 'ans4');
 
     return {
       data: [
